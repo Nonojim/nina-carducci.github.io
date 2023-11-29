@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
-		<link rel="stylesheet" href="assets/style.min.css">
+		<link rel="stylesheet" href="assets/style.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link rel="preload"as="style"href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"onload="this.rel='stylesheet'"/>
@@ -70,15 +70,20 @@
 	<body>
 		<header>
 			<h1>Nina Carducci</h1>
-			<nav>   
+			<nav>
 				<ul>
-					<li><a href="#about">À propos</a></li>
-					<li><a href="#gallery">Galerie</a></li>
-					<li><a href="#services">Service</a></li>
-					<li><a href="#contact">Contact</a></li>
-					<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img src="assets/images/instagram.png" alt="Logo d'Instagram"></a></li>
+				  <li><a href="#about" aria-label="Aller a la section A propos">À propos</a></li>
+				  <li><a href="#gallery" aria-label="Aller a la section Galerie">Galerie</a></li>
+				  <li><a href="#services" aria-label="Aller a la section Service">Service</a></li>
+				  <li><a href="#contact" aria-label="Aller a la section Contact">Contact</a></li>
+				  <li>
+					<a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank" aria-label="Ouvrir le profil Instagram">
+					  <img src="assets/images/instagram.png" alt="Logo d'Instagram">
+					</a>
+				  </li>
 				</ul>
-			</nav>
+			  </nav>
+			  
 		</header>
 		<section id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 			<div class="carousel-indicators">
@@ -121,16 +126,16 @@
 				<section id="gallery">
 					<h2 class="title">Portfolio</h2>
 					<div class="container py-3">
-						<div class="gallery" style="display: none">
-							<img loading="lazy" data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp" alt="Photographie d'un concert depuis la foule" />
-							<img loading="lazy" data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.webp" alt="Portrait d'entreprise d'un homme en costume au travail"/>
-							<img loading="lazy" data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.webp" alt="Portrait d'entreprise d'une femme au travail rigolant avec ses collègues"/>
-							<img loading="lazy" data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.webp" alt="Photographie d'un mariage où l'on voit les mains des mariés se toucher"/>
-							<img loading="lazy" data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.webp" alt="Portrait d'un homme ébloui par le soleil"/>
-						<img loading="lazy" data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.webp" alt="Photograpie de deux heureux mariés devant un palmier"/>
-						<img loading="lazy" data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.webp" alt="Portrait d'une femme au travers un grillage"/>
-						<img loading="lazy" data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.webp" alt="Photographie d'un chanteur en plein concert "/>
-						<img loading="lazy" data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.webp" alt="Photogrphie d'entreprise d'une femme souriante devant son ordinateur"/>
+					<div class="gallery" style="display: none">
+						<img loading="lazy" data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp" alt="Photographie d'un concert depuis la foule" tabindex="0"/>
+						<img loading="lazy" data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.webp" alt="Portrait d'entreprise d'un homme en costume au travail" tabindex="0"/>
+						<img loading="lazy" data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.webp" alt="Portrait d'entreprise d'une femme au travail rigolant avec ses collègues" tabindex="0"/>
+						<img loading="lazy" data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.webp" alt="Photographie d'un mariage où l'on voit les mains des mariés se toucher" tabindex="0"/>
+						<img loading="lazy" data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.webp" alt="Portrait d'un homme ébloui par le soleil" tabindex="0"/>
+						<img loading="lazy" data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.webp" alt="Photograpie de deux heureux mariés devant un palmier" tabindex="0"/>
+						<img loading="lazy" data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.webp" alt="Portrait d'une femme au travers un grillage" tabindex="0"/>
+						<img loading="lazy" data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.webp" alt="Photographie d'un chanteur en plein concert" tabindex="0"/>
+						<img loading="lazy" data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.webp" alt="Photogrphie d'entreprise d'une femme souriante devant son ordinateur" tabindex="0"/>
 					</div>
 				</div>
 				<div class="quote">

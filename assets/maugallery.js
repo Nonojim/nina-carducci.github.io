@@ -49,11 +49,13 @@
     navigation: true
   };
   $.fn.mauGallery.listeners = function(options) {
-    $(".gallery-item").on("click", function() {
-      if (options.lightBox && $(this).prop("tagName") === "IMG") {
-        $.fn.mauGallery.methods.openLightBox($(this), options.lightboxId);
-      } else {
-        return;
+    $(".gallery-item").on("click keydown", function(e) {
+      if (e.type === "click" || (e.type === "keydown" && e.which === 13)){
+        if (options.lightBox && $(this).prop("tagName") === "IMG") {
+          $.fn.mauGallery.methods.openLightBox($(this), options.lightboxId);
+        } else {
+          return;
+        }
       }
     });
 
@@ -126,7 +128,7 @@
           activeImage = $(this);
         }
       });
-      let activeTag = $(".tags-bar span.active-tag").data("images-toggle");
+      let activeTag = $(".tags-bar button.active-tag").data("images-toggle");
       let imagesCollection = [];
       if (activeTag === "all") {
         $(".item-column").each(function() {
@@ -166,7 +168,7 @@
           activeImage = $(this);
         }
       });
-      let activeTag = $(".tags-bar span.active-tag").data("images-toggle");
+      let activeTag = $(".tags-bar  button.active-tag").data("images-toggle");
       let imagesCollection = [];
       if (activeTag === "all") {
         $(".item-column").each(function() {
@@ -206,13 +208,13 @@
                         <div class="modal-body">
                             ${
                               navigation
-                                ? '<div class="mg-prev" style="cursor:pointer;position:absolute;top:50%;left:-15px;background:white;"><</div>'
+                                ? '<button class="mg-prev" aria-label="bouton image precedente" style="cursor:pointer;position:absolute;top:50%;left:-15px;background:white;"><</button>'
                                 : '<span style="display:none;" />'
                             }
                             <img class="lightboxImage img-fluid" alt="Contenu de l'image affichée dans la modale au clique"/>
                             ${
                               navigation
-                                ? '<div class="mg-next" style="cursor:pointer;position:absolute;top:50%;right:-15px;background:white;}">></div>'
+                                ? '<button class="mg-next" aria-label="bouton image suivante" style="cursor:pointer;position:absolute;top:50%;right:-15px;background:white;}">></button>'
                                 : '<span style="display:none;" />'
                             }
                         </div>
@@ -223,11 +225,11 @@
     showItemTags(gallery, position, tags) {
       var tagItems =
       //CORRECTION si dessous je supprimme "active" dans le html car cette classe ne sert a rien
-        '<li class="nav-item"><span class="nav-link active-tag"  data-images-toggle="all">Tous</span></li>';
+        '<li class="nav-item"><button class="nav-link active-tag"  data-images-toggle="all">Tous</button></li>';
       $.each(tags, function(index, value) {
         //CORRECTION si dessous je supprimme "active" dans le html car cette classe ne sert a rien
         tagItems += `<li class="nav-item"> 
-                <span class="nav-link"  data-images-toggle="${value}">${value}</span></li>`;
+                <button class="nav-link"  data-images-toggle="${value}">${value}</button></li>`;
       });
       var tagsRow = `<ul class="my-4 tags-bar nav nav-pills">${tagItems}</ul>`;
 
