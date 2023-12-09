@@ -228,8 +228,7 @@
         '<li class="nav-item"><button class="nav-link active-tag" aria-label="filtre gallerie afficher Tous"  data-images-toggle="all">Tous</button></li>';
       $.each(tags, function(index, value) {
         //CORRECTION si dessous je supprimme "active" dans le html car cette classe ne sert a rien
-        tagItems += `<li class="nav-item"> 
-                <button class="nav-link"  aria-label="filtre gallerie afficher ${value}" data-images-toggle="${value}">${value}</button></li>`;
+        tagItems += `<li class="nav-item"> <button class="nav-link"  aria-label="filtre gallerie afficher ${value}" data-images-toggle="${value}">${value}</button></li>`;
       });
       var tagsRow = `<ul class="my-4 tags-bar nav nav-pills">${tagItems}</ul>`;
 
