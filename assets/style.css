@@ -269,7 +269,7 @@ input[type="submit"] {
 	padding: .5em 1em
 }
 .carousel-control-next:focus, .carousel-control-prev:focus{
-	..carousel-control-prev-icon, .carousel-control-next-icon{
+	.carousel-control-prev-icon, .carousel-control-next-icon{
 		box-sizing: content-box !important;
 		border:10px solid;
 		border-color: grey;
