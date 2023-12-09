@@ -268,7 +268,8 @@ input[type="submit"] {
 	background-color: #BEB45A;
 	padding: .5em 1em
 }
-.carousel-control-next:focus {
+/*.carousel-control-next:focus, .carousel-control-prev:focus{}
+*/
 	.carousel-control-prev-icon, .carousel-control-next-icon{
 		box-sizing: content-box !important;
 		border:10px solid;
@@ -277,8 +278,7 @@ input[type="submit"] {
 		box-shadow: 0 0 10px black;
 		padding: 1px;
 	}
-}
-/*.carousel-control-prev:focus*/
+
 @media all and (max-width: 1180px) {
 	.picture {
 		flex : 2;
