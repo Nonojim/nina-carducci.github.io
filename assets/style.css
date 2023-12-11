@@ -269,16 +269,15 @@ input[type="submit"] {
 	padding: .5em 1em
 }
 
-.carousel-control-next:focus, .carousel-control-prev:focus{
-	.carousel-control-prev-icon, .carousel-control-next-icon{
-		box-sizing: content-box !important;
-		border:10px solid;
-		border-color: grey;
-		border-radius: 50%;
-		box-shadow: 0 0 10px black;
-		padding: 1px;
-	}
+.carousel-control-next:focus .carousel-control-next-icon, .carousel-control-prev:focus .carousel-control-prev-icon {
+	box-sizing: content-box !important;
+	border:10px solid;
+	border-color: grey;
+	border-radius: 50%;
+	box-shadow: 0 0 10px black;
+	padding: 1px;
 }
+
 @media all and (max-width: 1180px) {
 	.picture {
 		flex : 2;
